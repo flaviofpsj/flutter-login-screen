@@ -11,6 +11,7 @@ class App extends StatelessWidget {
         DeviceOrientation.portraitDown,
     ]);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Log In Screen',
       home: Scaffold(
         body: LoginScreen(),
