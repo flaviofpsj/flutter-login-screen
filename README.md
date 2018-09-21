@@ -1,6 +1,6 @@
 # Flutter Login Screen ![Github Stars](https://img.shields.io/github/stars/ffpsj/flutter-login-screen.svg?label=Stars) ![Github Forks](https://img.shields.io/github/forks/ffpsj/flutter-login-screen.svg?label=Forks) ![Github Watchers](https://img.shields.io/github/watchers/ffpsj/flutter-login-screen.svg?label=Watchers) ![Github Followers](https://img.shields.io/github/followers/ffpsj.svg?label=Followers) ![Github Contributors](https://img.shields.io/github/contributors/ffpsj/flutter-login-screen.svg?label=Contributors) ![Github Repository Size](https://img.shields.io/github/repo-size/ffpsj/flutter-login-screen.svg?label=Size)
 
-![Header](https://i.imgur.com/j7DlCwx.png)
+![Header](https://i.imgur.com/kXPQ9Y2.png)
 
 A graceful login screen with validation made in Flutter
 
@@ -18,4 +18,4 @@ A graceful login screen with validation made in Flutter
 
 ## Contact Me
 + E-mail: ffpsjr@gmail.com
-+ Telefone: (82) 9 9121-3725
++ Phone: +5582991213725
