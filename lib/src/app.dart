@@ -7,14 +7,14 @@ class App extends StatelessWidget {
   Widget build(BuildContext context){
     //controls screen orientation
     SystemChrome.setPreferredOrientations([
-        DeviceOrientation.portraitUp,
-        DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
     ]);
-    return MaterialApp(
+    return new MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Log In Screen',
-      home: Scaffold(
-        body: LoginScreen(),
+      home: new Scaffold(
+        body: new LoginScreen(),
       ),
     );
   }

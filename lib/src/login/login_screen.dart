@@ -16,34 +16,34 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   //build function
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new Scaffold(
       //resizes the items on the screen when the keyboard appears
       resizeToAvoidBottomPadding: false,
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('images/back.jpeg'),
+      body: new Container(
+        decoration: new BoxDecoration(
+          image: new DecorationImage(
+            image: new AssetImage('images/back.jpeg'),
             //fits the image to the screen
             fit: BoxFit.cover,
             //mask over the image
             colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
           )
         ),
-        child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 60.0),
-          child: Form(
+        child: new Container(
+          margin: new EdgeInsets.symmetric(horizontal: 60.0),
+          child: new Form(
             key: formKey,
-            child: Column(
+            child: new Column(
               children: <Widget>[
-                Expanded(
+                new Expanded(
                   flex: 1,
                   child: imageLogo(),
                 ),
-                Expanded(
+                new Expanded(
                   flex: 2,
                   child: inputContainer(),
                 ),
-                Expanded(
+                new Expanded(
                   flex: 1,
                   child: mediaContainer(),
                 ),
@@ -56,20 +56,20 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   }
 
   Widget imageLogo() {
-    return Container(
-      margin: EdgeInsets.only(top: 50.0, bottom: 10.0),
-      child: Image.asset('images/logo.png'),
+    return new Container(
+      margin: new EdgeInsets.only(top: 50.0, bottom: 10.0),
+      child: new Image.asset('images/logo.png'),
     );
   }
 
   Widget inputContainer() {
-    return Container(
-      child: Column(
+    return new Container(
+      child: new Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           emailForm(),
           passwordForm(),
-          Column(
+          new Column(
             children: <Widget>[
               loginButton(),
               forgotPassword(),
@@ -81,8 +81,8 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   }
 
   Widget mediaContainer() {
-    return Container(
-      child: Column(
+    return new Container(
+      child: new Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           socialMedia(),
@@ -93,13 +93,13 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   }
 
   Widget emailForm() {
-    return Container(
+    return new Container(
       //form background
-      decoration: BoxDecoration(
+      decoration: new BoxDecoration(
         color: Color.fromRGBO(255, 255, 255, 0.1),
         borderRadius: BorderRadius.circular(25.0),
       ),
-      child: TextFormField(
+      child: new TextFormField(
         //ux support button
         onFieldSubmitted: (String value) {
           FocusScope.of(context).requestFocus(textSecondFocusNode);
@@ -107,33 +107,33 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
         //keyboard style
         keyboardType: TextInputType.emailAddress,
         //typed text color
-        style: TextStyle(
+        style: new TextStyle(
           color: Colors.white
         ),
-        decoration: InputDecoration(
+        decoration: new InputDecoration(
           //icon style
-          prefixIcon: Padding(
-            padding: EdgeInsetsDirectional.only(end: 10.0),
-            child: Icon(
+          prefixIcon: new Padding(
+            padding: new EdgeInsetsDirectional.only(end: 10.0),
+            child: new Icon(
               Icons.mail,
               color: Colors.white
             ),
           ),
           //general text and style
           labelText: 'Email',
-          labelStyle: TextStyle(
+          labelStyle: new TextStyle(
             color: Colors.white,
           ),
           //help text and style
           hintText: 'Type your Email',
-          hintStyle: TextStyle(
+          hintStyle: new TextStyle(
             color: Color.fromRGBO(255, 255, 255, 0.4),
             fontSize: 13.0
           ),
           //sub line
           border: InputBorder.none,
           //interior padding
-          contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 35.0, 10.0),
+          contentPadding: new EdgeInsets.fromLTRB(20.0, 10.0, 35.0, 10.0),
         ),
         //error message
         validator: validateEmail,
@@ -146,35 +146,35 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   }
 
   Widget passwordForm() {
-    return Container(
-      decoration: BoxDecoration(
+    return new Container(
+      decoration: new BoxDecoration(
         color: Color.fromRGBO(255, 255, 255, 0.1),
         borderRadius: BorderRadius.circular(25.0),
       ),
-      child: TextFormField(
+      child: new TextFormField(
         focusNode: textSecondFocusNode,
         //hide text
         obscureText: true,
         keyboardType: TextInputType.text,
-        style: TextStyle(
+        style: new TextStyle(
           color: Colors.white
         ),
-        decoration: InputDecoration(
-          prefixIcon: Padding(
-            padding: EdgeInsetsDirectional.only(end: 10.0),
-            child: Icon(Icons.lock, color: Colors.white),
+        decoration: new InputDecoration(
+          prefixIcon: new Padding(
+            padding: new EdgeInsetsDirectional.only(end: 10.0),
+            child: new Icon(Icons.lock, color: Colors.white),
           ),
           labelText: 'Password',
-          labelStyle: TextStyle(
+          labelStyle: new TextStyle(
             color: Colors.white,
           ),
           hintText: 'Type your Password',
-          hintStyle: TextStyle(
+          hintStyle: new TextStyle(
             color: Color.fromRGBO(255, 255, 255, 0.4),
             fontSize: 13.0
           ),
           border: InputBorder.none,
-          contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 35.0, 10.0),
+          contentPadding: new EdgeInsets.fromLTRB(20.0, 10.0, 35.0, 10.0),
         ),
         validator: validatePassword,
         onSaved: (String value) {
@@ -185,13 +185,13 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   }
 
   Widget loginButton() {
-    return Container(
+    return new Container(
       height: 48.0,
       //sets the width size to "infinity"
       width: double.infinity,
       //gradient background
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
+      decoration: new BoxDecoration(
+        gradient: new LinearGradient(
           colors: [
             Color.fromRGBO(255, 7, 105, 1.0),
             Color.fromRGBO(182, 2, 74, 1.0),
@@ -201,13 +201,13 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
         ),
         borderRadius: BorderRadius.circular(25.0)
       ),
-      child: FlatButton(
-        shape: RoundedRectangleBorder(
+      child: new FlatButton(
+        shape: new RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25.0),
         ),
-        child: Text(
+        child: new Text(
           'Sign In',
-          style: TextStyle(
+          style: new TextStyle(
             color: Colors.white,
             fontSize: 16.0,
           ),
@@ -218,8 +218,8 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
             formKey.currentState.save();
             //snackbar
             final submittedAction = SnackBar(
-              content: Text('Email: $email | Pass: $password'),
-              action: SnackBarAction(
+              content: new Text('Email: $email | Pass: $password'),
+              action: new SnackBarAction(
                 label: 'Undo',
                 onPressed: () {
                   print('Undo Has Pressed');
@@ -235,14 +235,14 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   }
 
   Widget forgotPassword() {
-    return Container(
-      child: FlatButton(
+    return new Container(
+      child: new FlatButton(
         //sets all presses to be transparent
         highlightColor: Colors.transparent,
         splashColor: Colors.transparent,
-        child: Text(
+        child: new Text(
           'Forgot Password?',
-          style: TextStyle(
+          style: new TextStyle(
             fontSize: 11.0,
           ),
         ),
@@ -255,8 +255,8 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   }
 
   Widget socialMedia() {
-    return Container(
-      child: Row(
+    return new Container(
+      child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           buildIconButton(FontAwesomeIcons.facebookF, 'Facebook'),
@@ -268,13 +268,13 @@ class LoginScreenState extends State<LoginScreen> with ValidationWithReusable {
   }
   
   Widget signUp() {
-    return Container(
-      child: FlatButton(
+    return new Container(
+      child: new FlatButton(
         highlightColor: Colors.transparent,
         splashColor: Colors.transparent,
-        child: Text(
+        child: new Text(
           'Not a member yet? Register Here.',
-          style: TextStyle(
+          style: new TextStyle(
             fontSize: 11.0,
           ),
         ),

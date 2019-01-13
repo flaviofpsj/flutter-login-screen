@@ -21,13 +21,13 @@ class ValidationWithReusable {
     Color colorIcon = Color.fromRGBO(255, 7, 105, 1.0);
     Color colorBack = Colors.white;
     //function return
-    return Container(
-      decoration: BoxDecoration(
+    return new Container(
+      decoration: new BoxDecoration(
         color: colorBack,
         shape: BoxShape.circle,
       ),
-      child: IconButton(
-        icon: Icon(
+      child: new IconButton(
+        icon: new Icon(
           icon,
           color: colorIcon,
         ),
